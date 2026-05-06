@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bmirc1e6mkf1u"]
+[gd_scene load_steps=7 format=3 uid="uid://bmirc1e6mkf1u"]
 
 [ext_resource type="Texture2D" uid="uid://cdctm1thlh6ke" path="res://tilemaps.png" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c055utdqsowxd" path="res://ghost.tscn" id="1_h2yge"]
@@ -14,23 +14,23 @@ texture_region_size = Vector2i(100, 100)
 tile_size = Vector2i(100, 100)
 sources/1 = SubResource("TileSetAtlasSource_lquwl")
 
-[node name="Main" type="Node2D" unique_id=2137263216]
+[node name="Main" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1138837453]
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7mycd")
 format = 2
 layer_0/tile_data = PackedInt32Array(65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, -65534, 1, 0, -65535, 1, 0, -65536, 1, 0, -1, 1, 0, -2, 1, 0, -3, 1, 0, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 3, 1, 0, -65533, 1, 0, -131069, 1, 0, -131070, 1, 0, -131071, 1, 0, -131072, 1, 0, -65537, 1, 0, -65538, 1, 0, -65539, 1, 0, -65540, 1, 0, -5, 1, 0, 65531, 1, 0, 131067, 1, 0, -65541, 1, 0)
 
-[node name="ghost" parent="." unique_id=1945682539 instance=ExtResource("1_h2yge")]
+[node name="ghost" parent="." instance=ExtResource("1_h2yge")]
 position = Vector2(245, 29)
 
-[node name="Player" parent="." unique_id=1608276843 instance=ExtResource("2_1bvp3")]
+[node name="Player" parent="." instance=ExtResource("2_1bvp3")]
 position = Vector2(-303, -92)
 
-[node name="mutant" parent="." unique_id=396771709 instance=ExtResource("3_lquwl")]
+[node name="mutant" parent="." instance=ExtResource("3_lquwl")]
 position = Vector2(-8, 6)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2017727537]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=552803466]
-color = Color(0.10747976, 0.10747973, 0.10747973, 1)
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.10748, 0.10748, 0.10748, 1)

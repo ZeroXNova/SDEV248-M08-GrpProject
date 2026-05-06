@@ -1,58 +1,19 @@
-[gd_scene format=3 uid="uid://6rns1sbbv2fj"]
+[gd_scene load_steps=3 format=3 uid="uid://6rns1sbbv2fj"]
 
 [ext_resource type="Texture2D" uid="uid://b8fkenxvf20xf" path="res://mutant.png" id="1_cyrcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5eww"]
-size = Vector2(152.59157, 85)
+size = Vector2(152.592, 85)
 
-[sub_resource type="Animation" id="Animation_kufw8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
+[node name="mutant" type="CharacterBody2D"]
 
-[sub_resource type="Animation" id="Animation_vaefk"]
-resource_name = "crawl"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.88000053, 1), Vector2(1.0399994, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_k4dft"]
-_data = {
-&"RESET": SubResource("Animation_kufw8"),
-&"crawl": SubResource("Animation_vaefk")
-}
-
-[node name="mutant" type="CharacterBody2D" unique_id=396771709]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=967973484]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cyrcq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=565526985]
-position = Vector2(-6.0000005, 0)
-scale = Vector2(1.0747645, 0.9053758)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 0)
+scale = Vector2(1.07476, 0.905376)
 shape = SubResource("RectangleShape2D_c5eww")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1610948010]
-libraries/ = SubResource("AnimationLibrary_k4dft")
-autoplay = &"crawl"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "crawl"
